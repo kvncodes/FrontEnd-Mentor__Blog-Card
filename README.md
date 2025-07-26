@@ -22,7 +22,7 @@ Your users should be able to:
 
 ### Screenshot
 
-![ScreenShot](\Screenshot 2025-07-26 180553.png "Preview Screenshot of Page")
+![ScreenShot](\Screenshot.png "Preview Screenshot of Page")
 
 ### Links
 
