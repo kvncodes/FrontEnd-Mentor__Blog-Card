@@ -1,0 +1,150 @@
+@font-face {
+	font-family: "Figtree";
+	src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+:root {
+	--clr-primary-yellow-400: hsl(47, 88%, 63%);
+
+	--clr-neutral-100: hsl(0, 0%, 100%);
+	--clr-neutral-600: hsl(0, 0%, 42%);
+	--clr-neutral-700: hsl(0, 0%, 7%);
+
+	--fs-base: 1rem;
+
+	--ff-base: "Figtree";
+
+	--fw-base: 500;
+	--fw-bold: 800;
+}
+
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			interpolate-size: allow-keywords;
+		}
+	}
+
+	body {
+		line-height: 1.5;
+		/* 5. Improve text rendering */
+		-webkit-font-smoothing: antialiased;
+	}
+
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
+		display: block;
+		max-width: 100%;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
+}
+
+body {
+	font-family: var(--ff-base);
+	font-size: var(--fs-base);
+	background-color: var(--clr-primary-yellow-400);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding-inline: 1.5rem;
+}
+
+.blog-card {
+	background-color: var(--clr-neutral-100);
+	border-radius: 1rem;
+	padding: 1.5rem;
+	margin-block: 2rem;
+	display: grid;
+	gap: 1rem;
+	max-width: 400px;
+	border: 2px solid var(--clr-neutral-700);
+	box-shadow: 7px 8px 0 1px var(--clr-neutral-700);
+}
+
+.blog-card .header-image {
+	margin-inline: auto;
+	width: 100%;
+	border-radius: 12px;
+}
+
+.blog-card .blog-info {
+	display: grid;
+	gap: 1rem;
+	margin-block-start: 1rem;
+}
+
+.blog-card .blog-info .tag {
+	background-color: var(--clr-primary-yellow-400);
+	width: max-content;
+	font-weight: var(--fw-bold);
+	padding: 0.2rem 1rem;
+	border-radius: 4px;
+}
+
+.blog-card .blog-info .date {
+	font-weight: 700;
+}
+
+.blog-card h1 {
+	font-weight: var(--fw-bold);
+	font-size: 1.5rem;
+	transition: color 0.1s ease-in;
+}
+
+.blog-card h1:is(:hover, :focus-visible) {
+	color: var(--clr-primary-yellow-400);
+	cursor: pointer;
+}
+
+.blog-card > p {
+	color: var(--clr-neutral-700);
+	font-weight: var(--fw-base);
+}
+
+.blog-card .footer-profile {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-block: 1rem;
+}
+
+.blog-card .footer-profile img {
+	width: 44px;
+}
+
+.blog-card .footer-profile p {
+	font-weight: var(--fw-bold);
+	font-size: 1.1rem;
+}
